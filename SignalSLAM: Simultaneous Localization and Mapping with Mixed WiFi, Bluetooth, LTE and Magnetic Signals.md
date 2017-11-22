@@ -19,3 +19,12 @@ While using autonomous WiFi mapping robots may prove impractical in some buildin
 ### A. Objective: Crowd-sourced RF Mapping from the Pocket
 
 我们建议通过利用记录在一个或多个现成的智能手机上的所有传感器信号，无需实验者的额外工作即可构建包括WiFi，4G LTE或蓝牙的多模式射频信号地图。Our goal is to enable “crowd-sourced RF mapping from the pocket”.在一个优选的情况下，用户将简单地收集RF信号，同时在建筑物中自由行走，照顾他们的日常活动。 同时，他们将收集带有时间戳的WiFi和蓝牙RSS，4G LTE RSRP，户外的GPS磁场强度，GPS参考点，特定地标的近场通信（NFC）标签或QR码读数和行人航位推算 PDR）基于惯性数据。
+
+我们的系统依赖于状态空间模型，其中用户的轨迹是未知的，并且取决于来自行人运动模型的动力学和多传感器观察（包括WiFi或LTE信号）。 与现有的使用运动模型和WiFi在室内跟踪用户的传感器融合算法不同，我们不提前知道RF信号图：我们的目标是从数据库中重建它 一个自由移动的行人在口袋里穿着一个商业级的智能手机，人为干预有限或没有。
+
+我们系统的两个组成部分是行人推测定位（见下一节限制智能手机PDR）和适用于RF信号数据的SLAM算法。 SLAM为在不知道（移动）观察者的位置的情况下构建观测图的挑战提供了解决方案。
+
+我们研究的两个创新是使用姿态不变的PDR，让用户可以将手机放在裤子的任何口袋里，而我们的SLAM的修改版本叫做SignalSLAM，它通过绝对的收集来优化用户的姿势 包括WiFi RSS，蓝牙RSS，LTE RSRP或甚至磁场的大小的多模态信号相似性的位置和成对约束。
+
+*1）Pedestrian Dead Reckoning and its Limitations*
+
