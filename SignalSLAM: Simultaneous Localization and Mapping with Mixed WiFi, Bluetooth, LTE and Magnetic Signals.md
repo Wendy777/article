@@ -1,4 +1,4 @@
-<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+
 # 融合WIFI 蓝牙 LTE 地磁的 实时室内定位 （原文链接：http://pan.baidu.com/s/1jHYfD6A 密码：jjlk）
 关键词 众包
 ## 摘要
