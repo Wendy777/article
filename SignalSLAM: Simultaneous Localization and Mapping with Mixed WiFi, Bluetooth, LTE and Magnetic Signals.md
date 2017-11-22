@@ -27,4 +27,20 @@ While using autonomous WiFi mapping robots may prove impractical in some buildin
 我们研究的两个创新是使用姿态不变的PDR，让用户可以将手机放在裤子的任何口袋里，而我们的SLAM的修改版本叫做SignalSLAM，它通过绝对的收集来优化用户的姿势 包括WiFi RSS，蓝牙RSS，LTE RSRP或甚至磁场的大小的多模态信号相似性的位置和成对约束。
 
 *1）Pedestrian Dead Reckoning and its Limitations*
+Pedestrian Dead Reckoning (PDR) [22] has been presented as a possible solution for localization in GPS-deprived areas [27]. It requires an Inertial Measurement Unit (IMU) constituted of at least a 3-axis accelerometer and 3-axis compass. In its simplest form, PDR consists in a step counter that detects the peaks in the vertical component of acceleration (i.e., every time that the foot hits the floor) and reads the heading of the smartphone from the compass.
 
+A recent survey of the numerous PDR methods [19] investigated so far listed a large collection of equipment, such as footmounted Inertial Measurement Units (IMU) or smartphones, of techniques for step detection, heading estimation or inertial navigation as well as for their integration into hybrid systems with absolute position fixes in order to correct the dead reckoning output. It highlighted the need for using position fixes to cope with long-term drift, or to use additional sources of information such as RF signal strength measures and a known map of RF signal fingerprints.
+
+Among the recently-published hybrid localization techniques using PDR on smartphones, we notice that they typically require the user to hand-held the smartphone during the walk [15], [17], [25]. For better accuracy in the estimation of the step length or even the heading direction, it is preferable to use foot-mounted sensors [37], [38].
+
+### B. Review of Collaborative RF Localization and Mapping
+*1) Unsupervised and Semi-Supervised Mapping
+
+*2) RF Simultaneous Localization and Mapping
+
+*3) RF SLAM with Building Blueprints
+
+## II. METHODS
+### A. Pedestrian Dead Reckoning with Position Fixes
+
+我们在这里给出一个由行人航位推算（PDR）系统提供的运动模型的简单概述，该系统对于电话姿势是不变的。首先，在每个时间点估计电话的3D方向角，包括电话的偏航，记为{\color{Blue} \theta_t}（见图1）。 我们称之为偏航经纬度轴和电话坐标系统的X轴投影到地平面之间的角度。 这个惯例意味着，当用户以手臂向北延伸的方式看着电话屏幕时，偏航将是0度，如果向东延伸，则偏航将是-90度。
